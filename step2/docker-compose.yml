@@ -1,0 +1,27 @@
+version: '3'
+
+networks: 
+  mynetworkTP5: 
+    driver: bridge
+
+services :
+  mongodb:
+    image: mongo
+    networks: 
+      - mynetworkTP6
+    ports: 
+      - 27017:27017
+    container_name: mongodb-containerTP6
+
+  flaskapp: 
+    build: .
+    ports:
+      - 5000:5000 
+    networks:
+      - mynetworkTP6
+    depends_on:
+      - mongodb
+    container_name: flaskappTP6
+  
+
+

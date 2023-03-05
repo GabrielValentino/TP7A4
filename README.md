@@ -23,6 +23,6 @@
 ### To do it with a docker-compose you need to :
 ### 1- go to the repository/Part2
 ### 2- create a bridge netork : docker network create bridge_network
-### 3- use the command : docker-compose up
+### 3- use the command : docker compose up
 ###
 #### Now you have a working app which displays the content of a file. Any changes in the content of this file will be shown by refreshing the web page. You can go on localhost:8080 on you web browser to see it !
